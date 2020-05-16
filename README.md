@@ -23,11 +23,11 @@ Things you may want to cover:
 
 * ...
 
-## message テーブル
+## messages テーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|body|text|null: false|
+|body|text|
 |image|string|
 |group_id|integer|null: false, foreign_key: true|
 |user_id|integer|null: false, foreign_key: true|
@@ -37,9 +37,10 @@ Things you may want to cover:
 - belongs_to :user
 
 
-## group テーブル
+## groups テーブル
 |Column|Type|Options|
 |------|----|-------|
+|group_name|string|
 
 ### Association
 - has_many :messages
@@ -47,9 +48,11 @@ Things you may want to cover:
 - has_many :users, through: :group_users
 
 
-## user テーブル
+## users テーブル
 |Column|Type|Options|
 |------|----|-------|
+|name|string|
+|email|string|
 
 ### Association
 - has_many :messages
@@ -57,7 +60,7 @@ Things you may want to cover:
 - has_many :groups, through: :group_users
 
 
-## group_user テーブル
+## group_users テーブル
 
 |Column|Type|Options|
 |------|----|-------|
