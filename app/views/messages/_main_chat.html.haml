@@ -1,0 +1,68 @@
+-# ＜チャット画面＞
+
+.chat-main
+  .chat-main__group-info
+    .info-left
+      .group-name
+        test
+        %ul.group-name__member
+          Member: 
+          %li.member-name
+            masa
+          %li.member-name
+            taro
+            
+    .info-right
+      .info-right__link
+        = link_to 'Edit', "#", class: "editLink"
+    
+  .chat-main__message-list
+    .message-block
+      .message-block__name
+        #p
+          masa
+        #p.message-date
+          2019/11/20(Wed) 17:40:01
+
+      .message-block__text
+        おはよう！
+      .message-block__empty-block
+
+    .message-block
+      .message-block__name
+        #p
+          masa
+        #p.message-date
+          2019/11/20(Wed) 17:40:01
+
+      .message-block__text
+        おはよう！
+      .message-block__empty-block
+
+  .chat-main__message-form
+    %form.form-block
+      .form-block__content
+        %input.input-text{:placeholder => "type a message"}
+    
+      .form-block__pic
+        %label
+          = icon('fa', 'image', class: 'icon')
+          %input.hidden-button{type: 'file'}
+
+    .form-send
+      %input.form__submit{type: 'submit', value: 'Send'}
+      -# .send-text
+      -#   Send
+    
+    
+    -# %form
+    -#   %input.form__message
+    -#   .form-block
+    -#     %label.form__mask__image
+    -#       = icon('fa', 'image', class: 'icon')
+    -#     %input.form__submit{type: 'submit', value: 'send'}
+
+   
+
+
+  

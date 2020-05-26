@@ -1,0 +1,240 @@
+
+@import "config/colors";
+
+
+* {
+  box-sizing: border-box;
+}
+
+.wrapper{
+  display: flex;
+}
+
+.chat-main{
+  width: calc(100vw - 300px);
+  height: 100vh;
+  // background-color: $light_blue;
+
+  &__group-info{
+    height: 100px;
+    border-bottom: 1px solid #eeeeee;
+    // background-color: #253141;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    .info-left{
+      margin-left: 40px;
+      height: 100px;
+      width: 100px;
+      // background-color: #cf1818;
+
+      .group-name{
+        font-size: 20px;
+        color: #333333;
+        position: relative;
+        top: 35px;
+
+        &__member{
+          font-size: 12px;
+          color: #999999;
+          position: relative;
+          top: 15px;
+          display: flex;
+
+          .member-name{
+            padding-left: 5px;
+          }
+
+        }
+      }
+    
+    }
+
+    .info-right{
+      width: 72px;
+      height: 40px;
+      // background-color: #cf1818;
+      margin-right: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid $light_blue;
+      &__link{
+        .editLink{
+          font-size: 16px;
+          text-decoration: none;
+          color: $light_blue;
+          
+        }
+
+      }
+      
+      
+    }
+  }
+
+  &__message-list{
+    height: calc(100vh - 190px);
+    // width: calc(100vw-300px);
+    background-color: #fafafa;
+
+    .message-block{
+      margin-left: 40px;
+      position: relative;
+      top: 35px;
+
+      &__name{
+        display: flex;
+        font-size: 16px;
+        color: #333333;
+
+        .message-date{
+          font-size: 12px;
+          color: #999999;
+          position: relative;
+          left: 5px;
+        }
+      }
+      &__text{
+        position: relative;
+        top: 12px;
+        color: #434A54;
+        font-size: 14px;
+      }
+      &__empty-block{
+        height: 46px;
+        // background-color: #cf1818;
+        width: 40px;
+      }
+    }
+  }
+
+  &__message-form{
+    height: 90px;
+    background-color:#d2d2d2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .form-block{
+      background-color: #ffffff;
+      height: 50px;
+      width: calc(100vw - 505px);
+      position: relative;
+      // top: 20px;
+      // margin-top: 20px;
+      margin-left: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      &__content{
+        // align-items: center;
+        margin-left: 10px;
+        // font-size: 14px;
+
+        .input-text{
+          border: none;
+          font-size: 14px;
+          height: 50px;
+          width: calc(100vw - 555px);
+        }
+      }
+      &__pic{
+        padding-right: 10px;
+
+        .hidden-button{
+          display: none;
+        }
+      }
+    }
+    .form-send{
+      width: 100px;
+      height: 50px;
+      background-color: $light_blue;
+      margin-right: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      .form__submit{
+        width: 100px;
+        height: 50px;
+        border: none;
+        background-color: $light_blue;
+        color: $white;
+      }
+      // .send-text{
+      //   color: #ffffff;
+      // }
+    }
+  }
+
+}
+
+
+.side-bar{
+  width: 300px;
+  height: 100vh;
+  background-color: $side_blue_light;
+
+  &__user-name{
+    background-color: $side_blue_dark;
+    // width: 300px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+  }
+  &__group-list{
+
+    .techcamp{
+      color: $white;
+      font-size: 15px;
+      margin: 20px 0 0 20px;
+    }
+    .message-area{
+      color: $white;
+      font-size: 11px;
+      margin: 5px 0 0 20px;
+      padding-bottom: 40px;
+    }
+
+
+  }
+}
+
+.top-items{
+  margin: 0 20px;
+  height: 20px;
+  width: 260px;
+  // background-color: #d8d8d8;
+  display: flex;
+  justify-content: space-between;
+  
+  
+  
+  &__name{
+    color: $white;
+    // font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+
+  }
+  &__icons{
+    width: 60px;
+    height: 20px;
+    // background-color: red;
+    line-height: 20px;
+    display: flex;
+    justify-content: flex-end;
+
+    .fa-cog{
+      padding-left: 5px;
+      color:#ffffff;
+    }
+    .fa-edit{
+      color:#ffffff;
+    }
+  }
+}
