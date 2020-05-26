@@ -13,12 +13,10 @@
 .chat-main{
   width: calc(100vw - 300px);
   height: 100vh;
-  // background-color: $light_blue;
 
   &__group-info{
     height: 100px;
     border-bottom: 1px solid #eeeeee;
-    // background-color: #253141;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -27,7 +25,6 @@
       margin-left: 40px;
       height: 100px;
       width: 100px;
-      // background-color: #cf1818;
 
       .group-name{
         font-size: 20px;
@@ -45,16 +42,13 @@
           .member-name{
             padding-left: 5px;
           }
-
         }
       }
-    
     }
 
     .info-right{
       width: 72px;
       height: 40px;
-      // background-color: #cf1818;
       margin-right: 40px;
       display: flex;
       justify-content: center;
@@ -65,18 +59,14 @@
           font-size: 16px;
           text-decoration: none;
           color: $light_blue;
-          
         }
-
       }
-      
       
     }
   }
 
   &__message-list{
     height: calc(100vh - 190px);
-    // width: calc(100vw-300px);
     background-color: #fafafa;
 
     .message-block{
@@ -104,7 +94,6 @@
       }
       &__empty-block{
         height: 46px;
-        // background-color: #cf1818;
         width: 40px;
       }
     }
@@ -122,17 +111,13 @@
       height: 50px;
       width: calc(100vw - 505px);
       position: relative;
-      // top: 20px;
-      // margin-top: 20px;
       margin-left: 50px;
       display: flex;
       align-items: center;
       justify-content: space-between;
 
       &__content{
-        // align-items: center;
         margin-left: 10px;
-        // font-size: 14px;
 
         .input-text{
           border: none;
@@ -165,14 +150,10 @@
         background-color: $light_blue;
         color: $white;
       }
-      // .send-text{
-      //   color: #ffffff;
-      // }
     }
   }
 
 }
-
 
 .side-bar{
   width: 300px;
@@ -181,7 +162,6 @@
 
   &__user-name{
     background-color: $side_blue_dark;
-    // width: 300px;
     height: 100px;
     display: flex;
     align-items: center;
@@ -199,8 +179,6 @@
       margin: 5px 0 0 20px;
       padding-bottom: 40px;
     }
-
-
   }
 }
 
@@ -208,15 +186,11 @@
   margin: 0 20px;
   height: 20px;
   width: 260px;
-  // background-color: #d8d8d8;
   display: flex;
   justify-content: space-between;
   
-  
-  
   &__name{
     color: $white;
-    // font-weight: bold;
     font-size: 16px;
     line-height: 20px;
 
@@ -224,7 +198,6 @@
   &__icons{
     width: 60px;
     height: 20px;
-    // background-color: red;
     line-height: 20px;
     display: flex;
     justify-content: flex-end;
