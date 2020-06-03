@@ -14,11 +14,12 @@
   .side-bar__group-list
     - current_user.groups.each do |group|
       .techcamp
-        = link_to '#' do
+        = link_to group_messages_path(group) do
           = group.name
       .message-area
         #p
-          まだメッセージはありません
+          = group.show_last_message
+          -# まだメッセージはありません
     
     -# - current_user.groups.each do |group|
     -# = content_tag :div, value, class: key

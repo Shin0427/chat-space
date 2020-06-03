@@ -4,50 +4,72 @@
   .chat-main__group-info
     .info-left
       .group-name
-        test
-        %ul.group-name__member
-          Member: 
-          %li.member-name
-            masa
-          %li.member-name
-            taro
+        = @group.name
+
+        .group-name__member
+          = "Member: "+ @group.users.pluck(:name).join(', ')
             
     .info-right
       .info-right__link
-        = link_to 'Edit', "#", class: "editLink"
+        -# = link_to 'Edit', "#", class: "editLink"
+        = link_to 'Edit', edit_group_path(@group), class: "editLink"
     
   .chat-main__message-list
-    .message-block
-      .message-block__name
-        #p
-          masa
-        #p.message-date
-          2019/11/20(Wed) 17:40:01
+    = render @messages
+    -# ここでインスタンスを生成してる
 
-      .message-block__text
-        おはよう！
-      .message-block__empty-block
 
-    .message-block
-      .message-block__name
-        #p
-          masa
-        #p.message-date
-          2019/11/20(Wed) 17:40:01
+    -# .message-block
+    -#   .message-block__name
+    -#     #p
+    -#       = message.user.name
+    -#     #p.message-date
+    -#       -# = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
 
-      .message-block__text
-        おはよう！
-      .message-block__empty-block
+    -#   .message-block__text
+    -#     -# - if message.body.present?
+    -#     -#   %p.lower-message__content
+    -#     -#     = message.body
+
+    -#   .message-block__empty-block
+    -#     -# = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
+
+    -# .message-block
+    -#   .message-block__name
+    -#     #p
+    -#       masa
+    -#     #p.message-date
+    -#       2019/11/20(Wed) 17:40:01
+
+    -#   .message-block__text
+    -#     おはよう！
+    -#   .message-block__empty-block
+
+  -# .chat-main__message-form
+  -#   %form.form-block
+  -#     .form-block__content
+  -#       %input.input-text{:placeholder => "type a message"}
+    
+  -#     .form-block__pic
+  -#       %label
+  -#         = icon('fa', 'image', class: 'icon')
+  -#         %input.hidden-button{type: 'file'}
+
+  -#   .form-send
+  -#     %input.form__submit{type: 'submit', value: 'Send'}
+
+
 
   .chat-main__message-form
-    %form.form-block
+    = form_for [@group, @message], html: { class: "form-block" } do |f|
       .form-block__content
-        %input.input-text{:placeholder => "type a message"}
-    
+        = f.text_field :content, class: 'input-text', placeholder: 'type a message'
+      
       .form-block__pic
-        %label
+        -# = f.label :image, class: 'form__mask__image' do
+        = f.label :image do
           = icon('fa', 'image', class: 'icon')
-          %input.hidden-button{type: 'file'}
-
-    .form-send
-      %input.form__submit{type: 'submit', value: 'Send'}
+          = f.file_field :image, class: 'hidden-button'
+    
+      .form-send
+        = f.submit 'Send', class: 'form__submit'
