@@ -1,16 +1,18 @@
 
-.chat-main__message-list
-  .message-block
-    .message-block__name
-      #p
-        = message.user.name
-      #p.message-date
-        = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
+-# .chat-main__message-list
 
-    .message-block__text
-      - if message.content.present?
-        %p.lower-message__content
-          = message.content
+.message-block
+  .message-block__name
+    #p
+      = message.user.name
+    #p.message-date
+      = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
 
+  .message-block__text
+    - if message.content.present?
+      %p.lower-message__content
+        = message.content
+
+  - if message.image.present?
     .message-block__empty-block
       = image_tag message.image.url, class: 'lower-message__image' if message.image.present?

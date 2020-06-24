@@ -66,13 +66,16 @@
   }
 
   &__message-list{
+    // height: 60px;
     height: calc(100vh - 190px);
     background-color: #fafafa;
+    overflow: scroll;
 
     .message-block{
       margin-left: 40px;
       position: relative;
       top: 35px;
+      padding-bottom: 30px;
 
       &__name{
         display: flex;
@@ -91,20 +94,28 @@
         top: 12px;
         color: #434A54;
         font-size: 14px;
+        // height: 30px;
+        
       }
       &__empty-block{
-        height: 46px;
+        position: relative;
+        top: 20px;
+        height: 80px;
         width: 40px;
       }
     }
   }
 
   &__message-form{
+    width: calc( 100vw - 300px);
     height: 90px;
     background-color:#d2d2d2;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    position: absolute;
+    bottom: 0px;
 
     .form-block{
       background-color: #ffffff;
