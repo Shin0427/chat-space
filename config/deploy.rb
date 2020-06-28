@@ -5,7 +5,7 @@ set :application, "chat-space"
 set :repo_url, "git@github.com:Shin0427/chat-space.git"
 
 #デプロイ時に「Could not locate Gemfile」エラーが発生する
-set :bundle_gemfile,  "server/Gemfile"
+# set :bundle_gemfile,  "server/Gemfile"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
