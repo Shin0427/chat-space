@@ -120,7 +120,7 @@
     .form-block{
       background-color: #ffffff;
       height: 50px;
-      width: calc(100vw - 505px);
+      width: calc(100vw - 520px);
       position: relative;
       margin-left: 50px;
       display: flex;
@@ -149,7 +149,8 @@
       width: 100px;
       height: 50px;
       background-color: $light_blue;
-      margin-right: 40px;
+      margin: 0px 40px 0px 15px;
+      
       display: flex;
       justify-content: center;
       align-items: center;
@@ -183,6 +184,11 @@
       color: $white;
       font-size: 15px;
       margin: 20px 0 0 20px;
+      a {
+        text-decoration: none;
+        color: white;
+      }
+      
     }
     .message-area{
       color: $white;
