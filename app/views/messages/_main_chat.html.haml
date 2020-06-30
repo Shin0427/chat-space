@@ -63,7 +63,7 @@
   .chat-main__message-form
     = form_for [@group, @message], html: { class: "form-block" } do |f|
       .form-block__content
-        = f.text_field :content, class: 'input-text', placeholder: 'type a message'
+        = f.text_field :content, class: 'input-text', placeholder: ' type a message'
       
       .form-block__pic
         -# = f.label :image, class: 'form__mask__image' do

@@ -75,7 +75,8 @@
       margin-left: 40px;
       position: relative;
       top: 35px;
-      padding-bottom: 30px;
+      padding-bottom: 46px;
+      // padding-bottom: 0px;
 
       &__name{
         display: flex;
@@ -100,8 +101,14 @@
       &__empty-block{
         position: relative;
         top: 20px;
-        height: 80px;
+        // height: 80px;
         width: 40px;
+        // padding-bottom: 46px;
+        // margin-bottom: 46px;
+      }
+      &-space{
+        // height: 46px;
+        // width: 40px;
       }
     }
   }
@@ -120,7 +127,7 @@
     .form-block{
       background-color: #ffffff;
       height: 50px;
-      width: calc(100vw - 520px);
+      width: calc(100vw - 555px);
       position: relative;
       margin-left: 50px;
       display: flex;
@@ -128,7 +135,8 @@
       justify-content: space-between;
 
       &__content{
-        margin-left: 10px;
+        margin-left: 0px;
+        position: relative;
 
         .input-text{
           border: none;
@@ -138,7 +146,10 @@
         }
       }
       &__pic{
+        position: absolute;
         padding-right: 10px;
+        z-index: 1;
+        right: 10px;
 
         .hidden-button{
           display: none;
